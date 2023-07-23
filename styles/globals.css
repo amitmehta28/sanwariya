@@ -3,26 +3,133 @@
 @tailwind utilities;
 
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container {
+  @apply max-w-[1480x] w-full px-5 mx-auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.sec_spacing-80 {
+  @apply py-[40px] xmd:py-[80px];
 }
+
+.transition-300{
+  @apply transition-all duration-300;
+}
+
+.solid-btn {
+  @apply text-white bg-primary font-open-sans font-semibold px-4 py-[10px] hover:bg-dark-blue duration-300 lg:py-3 lg:px-[30px];
+}
+
+.solid-white-btn {
+  @apply text-primary bg-white font-open-sans px-8 py-[8px] font-semibold hover:text-white hover:bg-primary duration-300 lg:py-3 lg:px-[30px];
+}
+
+.border-bottom{
+  @apply border-b border-divider-main;
+}
+
+/* ======== HEADINGS ========*/
+
+/* Hero Heading */
+/* OpenSans - 800 - #833 - 55px */
+.ex-large-heading {
+  @apply font-open-sans font-extrabold text-main-text text-[36px] leading-[43px] md:text-[45px] md:leading-[55px] lg:text-[55px] lg:leading-[70px];
+}
+
+/* OpenSans - 700 - #FFF - 55px */
+.large-heading {
+  @apply font-open-sans font-bold text-white text-[36px] leading-[49px] md:text-[40px] md:leading-[56px] lg:text-[55px] lg:leading-[70px];
+}
+
+/* OpenSans - 700 - #833 - 28px */
+.main-heading {
+  @apply font-open-sans font-bold text-main-text text-[18px] leading-[25px] md:text-[28px] md:leading-[36px];
+}
+
+/* OpenSans - 600 - #046 */
+.medium-heading {
+  @apply font-open-sans font-semibold text-dark-text;
+}
+
+/* OpenSans - 700 - #046 -20px */
+.small-heading {
+  @apply font-open-sans font-bold text-dark-text text-[20px] leading-[28px];
+}
+
+/* OpenSans - 700 - #833 -36px */
+.reg-heading {
+  @apply font-open-sans font-bold text-main-text text-[36px] leading-[44px];
+}
+
+
+/* ======== TEXTS ========*/
+
+.nav-info {
+  @apply font-inter font-medium text-main-text text-[16px] leading-[24px];
+}
+
+/* OpenSans - 400 - #775 - 18px */
+.large-info {
+  @apply font-open-sans font-normal text-light-text text-[16px] leading-[28px] md:text-[18px];
+}
+
+/* OpenSans - 400 - #775 - 16px */
+.main-info {
+  @apply font-open-sans font-normal text-light-text text-[14px] md:text-[16px] md:leading-[24px];
+}
+
+/* OpenSans - 600 - #775 - 16px */
+.medium-info {
+  @apply font-open-sans font-semibold text-light-text text-[14px] leading-[24px] md:text-[16px];
+}
+
+/* OpenSans - 400 - #775 - 14px */
+.small-info {
+  @apply font-open-sans font-normal text-light-text text-[12px] leading-[20px] md:text-[14px] md:leading-[20px];
+}
+
+/* OpenSans - 400 - #827 - 16px */
+.reg-info {
+  @apply font-open-sans font-normal text-[#111827] text-[16px] leading-[20px];
+}
+
+
+
+.footer-title {
+  @apply font-open-sans font-semibold text-dark-text text-[20px];
+}
+
+.footer-info {
+  @apply font-open-sans font-normal text-light-text text-[16px];
+}
+
+.info-14 {
+  @apply font-open-sans font-normal text-light-text text-[14px];
+}
+
+
+
+/* Header */
+
+.hoverNavArrow{
+  @apply after:absolute after:h-[1px] after:w-[0px] after:bg-primary after:bottom-[0%] after:left-[50%] after:translate-x-[-50%] after:translate-y-[-50%] hover:after:w-[100%] after:transition-all after:duration-300;
+}
+.nav_down_arrow {
+  @apply duration-300;
+}
+
+.hoverNavArrow:hover .nav_down_arrow {
+  transform: rotateX(180deg);
+  @apply transition-300;
+}
+
+.hoverNavArrow:hover .nav_down_arrow path {
+  @apply stroke-primary;
+}
+
+
